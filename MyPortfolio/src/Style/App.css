@@ -1,0 +1,16 @@
+@import "./var.css";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+.App{
+    background-color: var(--color-bg);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+

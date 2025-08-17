@@ -1,0 +1,149 @@
+@import "./var.css";
+
+.home-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow: 0 4px 10px rgba(34, 34, 34, 0.2);
+  padding: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(to right, #000000 0%, #ffffff 100%);
+  clip-path: ellipse(80% 90% at 2% 90%);
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+.home-container:hover {
+  transform: scale(1.02);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+  padding-right: 20px;
+}
+
+.home-title {
+  font-size: 35px;
+  font-weight: 800;
+  width: 100%;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  font-size: 16px;
+  font-weight: 500;
+  color: #d0cdcd;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+  line-height: 1.6;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: #000;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  height: 45px;
+  padding: 4px;
+  text-align: center;
+  width: 170px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.contactBtn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.2);
+}
+
+.home-heroImg {
+  border-radius: 50%;
+  width: 40%;
+  object-fit: cover;
+  z-index: 1;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 830px) {
+  .home-container {
+    flex-direction: column-reverse;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+  }
+
+  .home-title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .home-description {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contactBtn {
+    width: 150px;
+    margin: 20px auto;
+  }
+
+  .home-heroImg {
+    width: 60%;
+  }
+
+  /* Adjusting the background shape on smaller screens */
+  .home-container::before {
+    clip-path: ellipse(80% 60% at 50% 50%);
+  }
+}
