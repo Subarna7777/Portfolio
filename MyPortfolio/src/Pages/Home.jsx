@@ -1,25 +1,63 @@
-import '../Style/Home.css'; 
-import profile from "../assets/ME3.jpg"
+import { useState, useEffect } from 'react';
+import '../Style/Home.css';
+import profile from "../assets/ME3.jpg";
 
- const Home = () => {
+const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="home-container">
+      <div className="home-background"></div>
+      
       <div className="home-content">
-        <h1 className="home-title">Hello, <br />  I'm Subarna</h1>
-        <p className="home-description">
-        I'm a passionate front-end developer specializing in building modern and interactive web applications using React. Let's create something amazing together!
-        </p>
-        <a href="" className="contactBtn">
-          Contact Me
-        </a>
+        <div className={`text-content ${isVisible ? 'fade-in-up' : ''}`}>
+          <h1 className="home-title">
+            <span className="greeting">Hello, I'm</span>
+            <span className="name">Subarna</span>
+          </h1>
+          
+          <div className="typewriter">
+            <h2 className="home-subtitle">Front-End Developer</h2>
+          </div>
+          
+          <p className="home-description">
+            I specialize in building modern, interactive web applications using React. 
+            With a passion for clean code and user-centered design, I create digital 
+            experiences that are both beautiful and functional.
+          </p>
+          
+          <div className="home-buttons">
+            <a href="#contact" className="btn btn-primary">
+              Contact Me
+            </a>
+            <a href="#projects" className="btn btn-secondary">
+              View Projects
+            </a>
+          </div>
+        </div>
+        
+        <div className={`image-content ${isVisible ? 'fade-in' : ''}`}>
+          <div className="image-wrapper">
+            <img
+              src={profile}
+              alt="Subarna - Frontend Developer"
+              className="home-heroImg"
+            />
+            <div className="image-overlay"></div>
+          </div>
+        </div>
       </div>
-      <img
-        src={profile}
-        alt="Hero image of me"
-        className="home-heroImg"
-      />
+      
+      <div className="scroll-indicator">
+        <span>Scroll down</span>
+        <div className="scroll-arrow"></div>
+      </div>
     </section>
   );
 };
 
-export default Home
+export default Home;

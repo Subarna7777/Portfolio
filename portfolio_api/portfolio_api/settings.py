@@ -93,13 +93,9 @@ WSGI_APPLICATION = 'portfolio_api.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Use MySQL as the database engine
-        'NAME': 'portfolio',  # The name of the database you created in phpMyAdmin
-        'USER': 'root',  # The MySQL username (default in XAMPP is 'root')
-        'PASSWORD': '',  # The MySQL password (by default, XAMPP has no password for 'root')
-        'HOST': '127.0.0.1',  # Localhost
-        'PORT': '3306',  # Default MySQL port
-    }
+        'ENGINE': 'django.db.backends.sqlite3', 
+        'NAME': BASE_DIR / "db.sqlite3", 
+    } 
 }
 
 

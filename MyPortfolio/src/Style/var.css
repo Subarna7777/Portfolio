@@ -1,13 +1,15 @@
-:root{
-  /* Colors */
-  --color-text: #666b6c; 
-  --color-primary: #007bff; 
-  --color-secondary: #e9ecef; 
-  --color-dark: #495057; 
-  --color-bg: #fff; 
-     /*Fonts*/
-     --font-roboto: "roboto";
-
+:root {
+  --color-primary: #4b5563;
+  --color-primary-dark: #374151;
+  --color-secondary: #6b7280;
+  --color-accent: #ef4444;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-bg: #ffffff;
+  --color-card: #f9fafb;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
 }
-
-

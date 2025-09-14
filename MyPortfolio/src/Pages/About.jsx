@@ -1,53 +1,93 @@
+import { useState, useEffect } from "react";
 import "../Style/About.css";
 import Me from "../assets/ME4.jpg"
-import { FaMousePointer, FaServer, FaPaintBrush } from "react-icons/fa";
+import { FaCode, FaServer, FaPalette, FaReact, FaNodeJs, FaFigma } from "react-icons/fa";
+import { SiPython } from "react-icons/si";
+
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <>
-     <h2 className="about-title">About</h2>
-    <section className="about-container" id="about">
-      <div className="about-content">
-        <img
-          src={Me}
-          alt="Me"
-          className="aboutImage"
-        />
-        <ul className="aboutItems">
-          <li className="aboutItem">
-            <FaMousePointer size={50}  className="aboutIcon" />
-            <div className="aboutItemText">
-              <h3>Frontend Developer</h3>
+    <section className="about-section" id="about">
+      <div className="container">
+        <h2 className="section-title">About Me</h2>
+        <div className="about-content">
+          <div className={`about-image ${isVisible ? 'fade-in' : ''}`}>
+            <div className="image-wrapper">
+              <img src={Me} alt="Subarna Shakya" className="profile-image" />
+              <div className="image-overlay"></div>
+            </div>
+          </div>
+
+          <div className={`about-info ${isVisible ? 'fade-in-up' : ''}`}>
+            <h3 className="about-subtitle">Crafting digital experiences with code and creativity</h3>
+            <p className="about-description">
+              I'm a passionate full-stack developer with expertise in building modern,
+              responsive web applications. With a strong foundation in both frontend and
+              backend technologies, I create seamless digital experiences that balance
+              functionality with aesthetic appeal.
+            </p>
+
+            <div className="skills-highlight">
+              <div className="skill-tag">
+                <FaReact className="skill-icon" />
+                <span>React.js</span>
+              </div>
+              <div className="skill-tag">
+                <SiPython className="skill-icon" />
+                <span>Django</span>
+              </div>
+              <div className="skill-tag">
+                <FaFigma className="skill-icon" />
+                <span>UI/UX Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`services-section ${isVisible ? 'fade-in-up' : ''}`}>
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon">
+                <FaCode size={30} />
+              </div>
+              <h3>Frontend Development</h3>
               <p>
-                I'm a frontend developer with experience in building responsive
-                and optimized sites.
+                Building responsive, accessible, and performant user interfaces
+                with modern frameworks like React JS.
               </p>
             </div>
-          </li>
-          <li className="aboutItem">
-            <FaServer size={50} className="aboutIcon" />
-            <div className="aboutItemText">
-              <h3>Backend Developer</h3>
+
+            <div className="service-card">
+              <div className="service-icon">
+                <FaServer size={30} />
+              </div>
+              <h3>Backend Development</h3>
               <p>
-                I have experience developing fast and optimized back-end systems
-                and APIs.
+                Developing robust server-side applications, RESTful APIs, and
+                database architectures with Django.
               </p>
             </div>
-          </li>
-          <li className="aboutItem">
-            <FaPaintBrush size={50}  className="aboutIcon" />
-            <div className="aboutItemText">
-              <h3>UI Designer</h3>
+
+            <div className="service-card">
+              <div className="service-icon">
+                <FaPalette size={30} />
+              </div>
+              <h3>UI/UX Design</h3>
               <p>
-                I have designed multiple landing pages and have created design
-                systems as well.
+                Creating intuitive user experiences with clean, modern interfaces
+                that prioritize usability and aesthetic appeal.
               </p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
-    </>
   );
 };
 

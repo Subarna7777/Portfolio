@@ -15,11 +15,11 @@ const Footer = () => {
         </li>
         <li className="footer-link">
           <FaLinkedin size={25}  />
-          <a href="https://www.linkedin.com/">Linkedin</a>
+          <a href="https://www.linkedin.com/in/subarna-khatiwada-baa4b625a/">Linkedin</a>
         </li>
         <li className="footer-link">
           <FaGithub size={25}  />
-          <a href="https://www.github.com/">Github</a>
+          <a href="https://github.com/Subarna7777">Github</a>
         </li>
       </ul>
     </footer>
