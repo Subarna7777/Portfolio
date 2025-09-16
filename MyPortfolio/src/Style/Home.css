@@ -79,7 +79,7 @@
 }
 
 .home-title .name {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(90deg, var(--color-text), var(--color-text-light));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -161,17 +161,16 @@
 
 .image-wrapper {
   position: relative;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 500px;
+  height: auto;
+  overflow: visible;
   box-shadow: var(--shadow-lg);
 }
 
 .home-heroImg {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   transition: var(--transition);
 }
 
@@ -187,7 +186,8 @@
 }
 
 .image-wrapper:hover .home-heroImg {
-  transform: scale(1.05);
+  transform: scale(1.25);
+ 
 }
 
 .image-wrapper:hover .image-overlay {
@@ -211,7 +211,7 @@
 .scroll-arrow {
   width: 2px;
   height: 20px;
-  background-color: var(--color-primary);
+  background-color: var(--color-text);
   margin-top: 0.5rem;
   position: relative;
 }
@@ -223,8 +223,8 @@
   left: -4px;
   width: 10px;
   height: 10px;
-  border-right: 2px solid var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
   transform: rotate(45deg);
 }
 

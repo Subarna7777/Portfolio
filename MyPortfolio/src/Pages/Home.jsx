@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../Style/Home.css';
-import profile from "../assets/ME3.jpg";
+import profile from "../assets/hero.png";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,7 +21,7 @@ const Home = () => {
           </h1>
           
           <div className="typewriter">
-            <h2 className="home-subtitle">Front-End Developer</h2>
+            <h2 className="home-subtitle">Web Developer</h2>
           </div>
           
           <p className="home-description">

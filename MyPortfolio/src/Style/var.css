@@ -1,15 +1,26 @@
 :root {
-  --color-primary: #4b5563;
-  --color-primary-dark: #374151;
-  --color-secondary: #6b7280;
-  --color-accent: #ef4444;
-  --color-text: #1f2937;
-  --color-text-light: #6b7280;
-  --color-bg: #ffffff;
-  --color-card: #f9fafb;
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --color-primary: rgb(55, 53, 62);        /* dark gray - main headers / buttons */
+  --color-primary-dark: rgb(68, 68, 78);   /* slightly lighter gray - hover / secondary highlights */
+  --color-secondary: rgb(113, 90, 90);      /* muted brown - accent buttons / small highlights */
+  --color-accent: rgb(211, 218, 217);         /* soft light gray - text, background highlights */
+  
+  --color-text: rgb(211, 218, 217);           /* main text color */
+  --color-text-light: rgb(113, 90, 90);     /* secondary text color */
+  --color-bg: #37353E;             /* main background color */
+  --color-card: #44444E;           /* card background / containers */
+
+  /* RGB versions for rgba usage if needed */
+  --color-primary-rgb: 55,53,62;
+  --color-primary-dark-rgb: 68,68,78;
+  --color-secondary-rgb: 113,90,90;
+  --color-accent-rgb: 211,218,217;
+
+  --shadow-sm: 0 1px 3px 0 rgb(0, 0, 0);
+  --shadow-md: 0 4px 6px -1px rgb(255, 246, 246), 0 2px 4px -1px rgb(113, 90, 90);
+  --shadow-lg: 0 10px 15px -3px rgb(0, 0, 0), 0 4px 6px -2px rgb(0, 0, 0);
+
   --border-radius: 12px;
-  --transition: all 0.3s ease;
+  --transition: all 0.2s ease;
 }
+
+
